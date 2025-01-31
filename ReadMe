@@ -1,0 +1,59 @@
+Playwright Test Automation for E-commerce Site
+
+This project contains Playwright-based test automation scripts for an e-commerce website. The test suite covers key functionalities such as navigating the homepage, adding products to the cart, and verifying the checkout process.
+
+Project Structure
+homePage.js: Contains locators and methods for interacting with the homepage of the e-commerce site.
+shopPage.js: Contains locators and methods for interacting with the shop page, including selecting products, adding them to the cart, and checking out.
+testSuite.test.spec.js: Playwright test suite that runs tests for the homepage and shop page functionalities.
+
+Key Functionalities Tested
+Homepage Assertions: Verifies that key elements such as the homepage title and navigation buttons are visible on the homepage.
+
+Shop Page Actions:
+
+- Select and view shoes from the product gallery.
+- Choose product options like color and size.
+- Add items to the shopping cart and proceed to checkout.
+
+API Validations:
+
+- Validates API responses for product amounts and cart content.
+- Verifies the "We can't accept online orders" message in case the order cannot be processed.
+
+Test Framework Setup
+
+Install necessary dependencies:
+
+npm install playwright @playwright/test
+
+Run the tests:
+npx playwright test
+
+The tests will run automatically, and you can inspect the results via the Playwright test output.
+
+Detailed Description of Files
+
+homePage.js
+
+This file contains the HomePage class with locators for interacting with the homepage and verifying essential elements such as page title, headers, and buttons. It includes:
+
+- Locators for homepage elements.
+- Functions for interacting with those elements.
+- Assertion methods to check visibility of critical elements.
+
+shopPage.js
+
+This file contains the ShopPage class, which is responsible for interacting with the shop page. It includes:
+
+- Locators for various product and cart-related actions (like selecting shoes, adding to cart, and going to checkout).
+- Functions for adding products to the cart and navigating through the checkout process.
+- API calls to verify product price and cart details via HTTP requests.
+- Assertions to validate expected messages, such as the "We can't accept online orders" message.
+
+testSuite.test.spec.js
+
+The test suite defines the test cases for verifying both homepage and shop page functionalities. It includes:
+
+- A test case to check if the homepage loads and essential elements are present.
+- A test case for adding products to the cart, viewing the cart, and proceeding to checkout.
