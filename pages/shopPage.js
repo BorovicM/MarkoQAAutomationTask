@@ -113,7 +113,6 @@ export class ShopPage {
     await this.selectShoesOption();
     await this.clickOnPreferedColor();
     await this.clickOnIncrementProductButton();
-    await this.page.pause();
     await this.getApiResponseForProductAmount();
     await this.selectToAddToCart();
     await this.clickOnViewCart();
